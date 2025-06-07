@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SkillHelp - Learn New Skills</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <h1>🧠 SkillHelp</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#" onclick="showArticles()">Browse Skills</a></li>
+      <li><a href="#" onclick="showSearch()">Search</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h2>Master New Skills, One Article at a Time</h2>
+      <p>Browse quick guides on communication, coding, creativity, productivity & more. Learn fast. Grow daily.</p>
+      <button onclick="showArticles()">Start Learning</button>
+    </section>
+
+    <section id="searchSection" style="display:none;">
+      <input type="text" id="searchInput" placeholder="Search for skills..." oninput="searchArticles()" />
+    </section>
+
+    <section id="articles" style="display:none;"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

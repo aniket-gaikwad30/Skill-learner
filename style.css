@@ -1,0 +1,236 @@
+/* --- Base Styles & Typography --- */
+body {
+    font-family: 'Inter', system-ui, sans-serif; /* Added Inter for a modern look */
+    margin: 0;
+    background: #f0f2f5; /* Lighter background for less stark contrast */
+    color: #333; /* Darker text for better readability */
+    line-height: 1.6;
+  }
+  
+  /* --- Navigation Bar --- */
+  nav {
+    background: #1a202c; /* Slightly darker navy for contrast */
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
+  
+  nav h1 {
+    margin: 0;
+    font-size: 1.8rem; /* Slightly larger heading */
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; /* Increased gap for better spacing */
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600; /* Bolder links */
+    transition: color 0.3s ease; /* Smooth transition for hover */
+  }
+  
+  nav a:hover {
+    color: #a78bfa; /* Lighter purple on hover */
+  }
+  
+  /* --- Main Content Area --- */
+  main {
+    padding: 2.5rem 2rem; /* More vertical padding */
+    max-width: 1200px; /* Max width for content on large screens */
+    margin: 0 auto; /* Center the main content */
+  }
+  
+  /* --- Hero Section --- */
+  .hero {
+    text-align: center;
+    background: linear-gradient(135deg, #4c51bf, #7c3aed); /* Adjusted gradient colors */
+    color: white;
+    padding: 4rem 2rem; /* More generous padding */
+    border-radius: 12px; /* More rounded corners */
+    margin-bottom: 3rem; /* More space below hero */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  }
+  
+  .hero h2 {
+    font-size: 2.8rem; /* Larger heading */
+    margin-bottom: 1rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* --- Buttons --- */
+  button {
+    background: #6d28d9; /* Brighter purple */
+    color: white;
+    padding: 0.8rem 1.8rem; /* Larger padding */
+    border: none;
+    border-radius: 8px; /* More rounded corners */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease; /* Added transform for subtle click effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:hover {
+    background: #7c3aed; /* Slightly lighter purple on hover */
+    transform: translateY(-2px); /* Lift button on hover */
+  }
+  
+  button:active {
+    transform: translateY(0); /* Press button on click */
+  }
+  
+  /* --- Search Section --- */
+  #searchSection {
+    margin-bottom: 2.5rem; /* More space below search */
+    text-align: center;
+  }
+  
+  #searchInput {
+    padding: 0.8rem 1rem; /* Larger padding */
+    width: 90%; /* Wider on smaller screens */
+    max-width: 500px; /* Max width for search input */
+    font-size: 1.1rem;
+    border-radius: 8px; /* More rounded corners */
+    border: 1px solid #cbd5e1; /* Softer border */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Inner shadow */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #searchInput:focus {
+    outline: none;
+    border-color: #a78bfa; /* Highlight border on focus */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 0 3px rgba(167, 139, 250, 0.2); /* Soft focus ring */
+  }
+  
+  /* --- Article List --- */
+  #articles h2 {
+    font-size: 2rem;
+    color: #2d3748;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .article {
+    background: white;
+    padding: 1.5rem; /* More padding */
+    border-radius: 10px; /* Slightly more rounded */
+    margin-bottom: 1.5rem; /* More space between articles */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .article:hover {
+    transform: translateY(-5px); /* Lift article on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+  
+  .article h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    font-size: 1.6rem; /* Larger title */
+    color: #2d3748;
+    font-weight: 700;
+  }
+  
+  .article p {
+    font-size: 1rem;
+    color: #4a5568;
+    margin-bottom: 1rem;
+  }
+  
+  .article small {
+    color: #718096; /* Softer grey for category */
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  /* --- Responsive Design --- */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column; /* Stack nav items on small screens */
+      padding: 1rem;
+    }
+  
+    nav ul {
+      margin-top: 1rem;
+      gap: 1rem; /* Closer links */
+    }
+  
+    nav h1 {
+      font-size: 1.6rem;
+    }
+  
+    main {
+      padding: 1.5rem 1rem; /* Reduced padding on small screens */
+    }
+  
+    .hero {
+      padding: 2.5rem 1.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .hero h2 {
+      font-size: 2.2rem;
+    }
+  
+    .hero p {
+      font-size: 1rem;
+    }
+  
+    button {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+    }
+  
+    #searchInput {
+      width: 95%; /* Wider search input */
+    }
+  
+    .article {
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .article h3 {
+      font-size: 1.4rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    nav ul {
+      flex-direction: column; /* Stack nav links vertically */
+      text-align: center;
+      gap: 0.5rem;
+    }
+  
+    .hero h2 {
+      font-size: 1.8rem;
+    }
+  
+    .hero p {
+      font-size: 0.9rem;
+    }
+  }
